@@ -1,16 +1,13 @@
+# Python 3 code
 server = int(input())
-input_array = []
-
-for i in range(0, 5):
-    ele = int(input())
-    input_array.append(ele)
+a, b, c, d, e = map(int, input().split())
 
 
-def updateServer(servers, input_array):
-    if input_array[4] < 50:
-        return servers / 2
+def updateServer(servers, e):
+    if e < 50:
+        return int(servers / 2)
     else:
-        return 2 * servers + 1
+        return int(2 * servers + 1)
 
 
-print(updateServer(server, input_array))
+print(updateServer(server, e))
